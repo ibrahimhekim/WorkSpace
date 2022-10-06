@@ -1,0 +1,41 @@
+package ders3;
+
+public class Counter3 implements Runnable{
+
+    private String name;
+    private int id;
+
+    public Counter3(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    @Override
+    public void run() {
+        System.out.println(this.name + " calisti.");
+        for (int i=0; i<10; i++){
+            try {
+                Thread.sleep(1000L,this.id);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(this.name + " : " + i);
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}
