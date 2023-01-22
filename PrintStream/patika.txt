@@ -1,0 +1,1 @@
+Türkçe karakter kontrolünü sağlayacağız.
